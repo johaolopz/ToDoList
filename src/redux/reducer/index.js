@@ -8,7 +8,6 @@ export default function reducer(state = initialState, action) {
         // Aca va tu codigo;
         case ADD_TODO:
           state.stateTodo.push(action.payload)
-          console.log(state.stateTodo)
           return {...state};
         case REMOVE_TODO:
           return state.stateTodo.filter(c=>c.id !== action.payload);
