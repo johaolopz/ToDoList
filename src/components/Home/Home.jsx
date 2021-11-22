@@ -1,19 +1,20 @@
 import React from "react";
 import Todos  from "../Todos/Todos"
+import "./home.css"
 
 function Home() {
     return (
-        <div>
-      <div>
-        <Todos status="Todo" />
-      </div>
-      <div>
-        <Todos status="InProgress" />
-      </div>
-      <div>
-        <Todos status="Done" />
-      </div>
-    </div>
+        <div className="todosContainer">
+          <div className="divTodo">
+            <Todos status="Todo" />
+          </div>
+          <div className="divInProgress">
+            <Todos status="InProgress" />
+          </div>
+          <div className="divDone">
+            <Todos status="Done" />
+          </div>
+        </div>
     );
 }
 

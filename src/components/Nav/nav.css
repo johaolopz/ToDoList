@@ -1,0 +1,85 @@
+.divNav{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-bottom: 65px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 140px;
+    margin-left: 44px;
+    margin-top: 33px;
+    margin-right: 20px;
+
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.link1{
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    margin-top: 12px;
+    width: 189px;
+    height: 57px;
+    margin-left: 5px;
+
+    font-family: 'Bruno Ace', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 58px;
+
+    color: #ffffff;
+}
+
+.buttonPlusContainerRight {
+    display: flex;
+    flex-direction: row;
+    /* text-decoration: none; */
+    justify-content: right;
+    margin-top: -70px;
+    width: 150px;
+    margin-left: 53px;
+    transition: 0.1s;
+}
+
+.buttonPlusContainerRight:hover {
+    transform: scale(1.03);
+}
+
+#words {
+    display: flex;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.divButtonRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#buttonPlus{
+    display: flex;
+}
+
+.divH2 {
+    display: flex;
+}
+
+.iconList {
+    display: flex;
+    margin-top: 25px;
+    margin-right: 44px;
+}

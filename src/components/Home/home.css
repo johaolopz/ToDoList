@@ -1,0 +1,17 @@
+.todosContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divTodo{
+    display: flex;
+}
+
+.divInProgress{
+    display: flex;
+}
+
+.divDone{
+    display: flex;
+}
