@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { addTodo } from '../../redux/actions/index';
 import { useDispatch } from "react-redux";
 import "./addtodo.css"
+import swal from "sweetalert"
+import { Navigate } from "react-router-dom";
 
 function AddTodo() {
     const dispatch = useDispatch();
@@ -11,6 +13,7 @@ function AddTodo() {
         place: '',
         date: ''
       });
+    const [redirect, setRedirect] = useState(false)
       
       function handleChange(e) {
         setInputText({ 
@@ -21,11 +24,24 @@ function AddTodo() {
       function handleSubmit(e) {
         e.preventDefault();
         if (inputText.title === '' || inputText.description === '' || inputText.place === '' || inputText.date === '') {
-          alert("Could not add. Fill in all fields!!!")
+          swal("Could not add!", "Fill in all fields!!!", "error");
         }
         else {
           dispatch(addTodo(inputText));
-          alert('ToDO added successfully!!!');
+          swal({
+            title: "ToDO added!!!",
+            text: "Do you want to add a new ToDO?",
+            icon: "success",
+            buttons: {
+              yes: true,
+              cancel: "No",
+            }
+          })
+          .then((result) => {
+            if (!result) {
+              setRedirect(true)
+            }
+          });
           setInputText({
             title: '',
             description: '',
@@ -35,6 +51,8 @@ function AddTodo() {
         }
       }      
     return (
+      <Fragment>
+        {(redirect) && <Navigate to="/" />}
         <div className="divFormGlobal">
           <div className="divForm">
             <form className="form-container" onSubmit={(e) => handleSubmit(e)}>
@@ -76,6 +94,7 @@ function AddTodo() {
             </form>
           </div>
         </div>
+      </Fragment>
     );
 }
 
