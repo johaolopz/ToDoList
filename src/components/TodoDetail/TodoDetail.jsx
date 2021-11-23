@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-import { toInProgress, toDone, removeTodo } from '../../redux/actions/index';
+import { toInProgress, toDone, removeTodo, details } from '../../redux/actions/index';
 import "./todoDetail.css"
 
 export function TodoDetail() {
     const dispatch = useDispatch();
     let params = useParams();
-    const stateTodo = useSelector(state => state.stateTodo)
-    let details = stateTodo[params.id-1];
+    const detailTodo = useSelector(state => state.details)
+    useEffect(() => {
+      dispatch(details(parseInt(params.id)))
+    },[]);
   return (
     <div>
       <div className="container">
-          <h2>{details.title}</h2>
+          <h2>{detailTodo[0].title}</h2>
           <div className="info">
-              <div>Description: {details.description}</div>
-              <div>Place: {details.place}</div>
-              <div>Date: {details.date}</div>
+              <div>Description: {detailTodo[0].description}</div>
+              <div>Place: {detailTodo[0].place}</div>
+              <div>Date: {detailTodo[0].date}</div>
           </div>
           <div className="buttons">
               <button onClick={() => dispatch(toDone(parseInt(params.id)))} >DONE</button>

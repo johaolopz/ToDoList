@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
-    margin-bottom: 65px;
 }
 
 header {
@@ -10,7 +9,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 140px;
+    height: 98px;
     margin-left: 44px;
     margin-top: 33px;
     margin-right: 20px;
@@ -33,8 +32,8 @@ h2 {
     font-family: 'Bruno Ace', sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 38px;
+    line-height: 38px;
 
     color: #ffffff;
 }
@@ -44,9 +43,9 @@ h2 {
     flex-direction: row;
     /* text-decoration: none; */
     justify-content: right;
-    margin-top: -70px;
-    width: 150px;
-    margin-left: 53px;
+    margin-top: -38px;
+    margin-left: 7px;
+    width: 100px;
     transition: 0.1s;
 }
 
@@ -56,6 +55,8 @@ h2 {
 
 #words {
     display: flex;
+    height: 85%;
+    margin-right: 10px;
 }
 
 .buttonContainer{
@@ -68,10 +69,12 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: right;
+    margin-top: 20px;
 }
 
 #buttonPlus{
     display: flex;
+    width: 80%;
 }
 
 .divH2 {
@@ -81,5 +84,9 @@ h2 {
 .iconList {
     display: flex;
     margin-top: 25px;
-    margin-right: 44px;
+    margin-right: 14px;
+}
+
+#todoListIcon{
+    height: 70%;
 }

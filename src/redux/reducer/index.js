@@ -1,6 +1,12 @@
-import {ADD_TODO, REMOVE_TODO, TO_IN_PROGRESS, TO_DONE} from "../actions/index";
+import {ADD_TODO, REMOVE_TODO, TO_IN_PROGRESS, TO_DONE, DETAILS} from "../actions/index";
 const initialState = {
-    stateTodo : []
+    stateTodo : [],
+    details : [{
+      title:"",
+      description:"",
+      place:"",
+      date:""
+    }]
 };
 
 export default function reducer(state = initialState, action) {
@@ -21,8 +27,13 @@ export default function reducer(state = initialState, action) {
           state.stateTodo.forEach(c => {
             if(c.id === action.payload){
             c.status = "Done";
-      };});
-      return state;
+          };});
+          return state;
+        case DETAILS:
+          const details = state.stateTodo.filter((el) => el.id === action.payload);
+          return {...state,
+          details : details
+          };
         default:
             return {...state}
     }

@@ -2,6 +2,7 @@ export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const TO_IN_PROGRESS = 'TO_IN_PROGRESS';
 export const TO_DONE = 'TO_DONE';
+export const DETAILS = 'DETAILS';
 
 let todoId = 0
 
@@ -22,4 +23,8 @@ export const toInProgress = (payload) => {
 
 export const toDone = (payload) => {
     return { type: TO_DONE, payload: payload };
+};
+
+export const details = (payload) => {
+    return { type: DETAILS, payload: payload };
 };

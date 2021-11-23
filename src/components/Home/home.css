@@ -1,17 +1,36 @@
 .todosContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .divTodo{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 44px;
+    width: 26%;
 }
 
 .divInProgress{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    display: flex;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 26%;
 }
 
 .divDone{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    display: flex;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 65px;
+    width: 26%;
 }

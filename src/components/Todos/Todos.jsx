@@ -8,7 +8,7 @@ export function Todos({status}) {
     const stateTodo = useSelector(state => state.stateTodo)
     return (
         <div className="divTodos">
-          <span><p>{status}</p></span>
+          <div className="divSpan"><span>{status}</span></div>
            {stateTodo.map(el => {
              if (el.status === status) {
                return (

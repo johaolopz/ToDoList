@@ -3,7 +3,7 @@ import "./todo.css"
 
 export function Todo({title}) {
   return (
-    <div className="divTodo">
+    <div className="divTodoCard">
       <h1 className="titleTodo">- {title}</h1>
     </div>
   )

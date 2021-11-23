@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addTodo } from '../../redux/actions/index';
 import { useDispatch } from "react-redux";
+import "./addtodo.css"
 
 function AddTodo() {
     const dispatch = useDispatch();
@@ -19,10 +20,23 @@ function AddTodo() {
       
       function handleSubmit(e) {
         e.preventDefault();
-        dispatch(addTodo(inputText));
+        if (inputText.title === '' || inputText.description === '' || inputText.place === '' || inputText.date === '') {
+          alert("Could not add. Fill in all fields!!!")
+        }
+        else {
+          dispatch(addTodo(inputText));
+          alert('ToDO added successfully!!!');
+          setInputText({
+            title: '',
+            description: '',
+            place: '',
+            date: ''
+          });
+        }
       }      
     return (
-        <div>
+        <div className="divFormGlobal">
+          <div className="divForm">
             <form className="form-container" onSubmit={(e) => handleSubmit(e)}>
                 <label className="label" htmlFor="title">Title</label>
                 <input
@@ -31,12 +45,14 @@ function AddTodo() {
                 autoComplete="off"
                 value= {inputText.title}
                 onChange={handleChange}
+                className="inputs"
                 />
                 <label className="label" htmlFor="description">Description</label>
                 <textarea
                 name="description"
                 value= {inputText.description}
-                onChange={handleChange}>
+                onChange={handleChange}
+                className="inputs">
                 </textarea>
                 <label className="label" htmlFor="place">Place</label>
                 <input
@@ -45,17 +61,20 @@ function AddTodo() {
                 autoComplete="off"
                 value= {inputText.place}
                 onChange={handleChange}
+                className="inputs"
                 />
                 <label className="label" htmlFor="date">Date</label>
                 <input
-                type="text"
+                type="date"
                 name="date"
                 autoComplete="off"
                 value= {inputText.date}
                 onChange={handleChange}
+                className="inputs"
                 />
-                <button type="submit">Add</button>
+                <button id="addButton" type="submit">Add</button>
             </form>
+          </div>
         </div>
     );
 }
