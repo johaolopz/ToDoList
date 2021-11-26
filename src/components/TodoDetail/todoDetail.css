@@ -1,11 +1,49 @@
-.container{
+.detailComponentContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h2 {
+.container{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px 50px 0px 0px;
+    box-shadow: 0px -20px 50px 1px black;
+}
+
+.spanTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.h2Title {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0px 50px;
+
+    font-family: 'Bruno Ace', sans-serif;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 38px;
+    color: #7226d6;
+    font-weight: bold;
+    text-shadow: 2px 2.75px 0px rgba(0, 0, 0, 0.856);
+}
+
+.info {
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.details {
+    font-weight: normal;
 }
 
 #doneButton {
@@ -32,4 +70,38 @@ span {
 
 .buttons {
     margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.divBack {
+    width: 17%;
+    font-family: 'Bruno Ace', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    background-color:black;
+    border: 3px solid black;
+    border-radius: 10px 10px;
+    margin-bottom: 5px;
+    align-self: flex-end;
+    margin-right: 20px;
+}
+
+.divBack:hover{
+    background-color:#7226d6;
+    border: 3px solid black;
+    color: white;
+}
+
+hr {
+    margin-top: -2.5px;
+    width: 63%;
+    height: 15px;
+    background-color: black;
+    border: none;
+    box-shadow: 0px 20px 30px 1px black;
 }

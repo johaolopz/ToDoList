@@ -15,23 +15,24 @@ export function TodoDetail() {
       dispatch(details(parseInt(params.id)))
     },[]);
   return (
-    <div>
+    <div className="detailComponentContainer">
       <div className="container">
-          <h2>{detailTodo[0].title}</h2>
-          <div className="info">
-              <div>Description: {detailTodo[0].description}</div>
-              <div>Place: {detailTodo[0].place}</div>
-              <div>Date: {detailTodo[0].date}</div>
-          </div>
-          <div className="buttons">
-              <Button variant="contained" color="success" id="doneButton" onClick={() => dispatch(toDone(parseInt(params.id)))} >DONE</Button>
-              <Button variant="contained" color="secondary" id="inProgressButton" onClick={() => dispatch(toInProgress(parseInt(params.id)))} >IN PROGRESS</Button>
-              <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatch(removeTodo(parseInt(params.id)))} >DELETE</Button>
-          </div>
-          <div>
-            <Link exact to="/" className="link">Home</Link>
-          </div>
+        <span className="spanTitle"><h2 className="h2Title">{detailTodo[0].title}</h2></span>
+        <div className="info">
+            <div>Description: <label className="details">{detailTodo[0].description}</label></div>
+            <div>Place: <label className="details">{detailTodo[0].place}</label></div>
+            <div>Date: <label className="details">{detailTodo[0].date}</label></div>
         </div>
+        <div className="buttons">
+            <Button variant="contained" color="success" id="doneButton" onClick={() => dispatch(toDone(parseInt(params.id)))} >DONE</Button>
+            <Button variant="contained" color="secondary" id="inProgressButton" onClick={() => dispatch(toInProgress(parseInt(params.id)))} >IN PROGRESS</Button>
+            <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatch(removeTodo(parseInt(params.id)))} >DELETE</Button>
+        </div>
+        <div className="divBack">
+          <Link exact to="/" className="link">← Back</Link>
+        </div>
+      </div>
+      <hr />
     </div>
   )
 };

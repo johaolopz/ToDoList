@@ -10,7 +10,7 @@ export function Nav() {
     <div className="divNav">
       <header>
         <div className="divH2">
-            <h2>
+            <h2 className="homeIcon">
               <Link exact to="/" className="link1">ToDO LIST</Link>
             </h2>
         </div>
