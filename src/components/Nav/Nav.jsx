@@ -4,6 +4,7 @@ import "./nav.css"
 import buttonPlus from "../../images/buttonPlus.svg"
 import words from "../../images/words.svg"
 import todoListIcon from "../../images/todoListIcon.svg"
+import sign from "../../images/sign.svg"
 
 export function Nav() {
   return (
@@ -13,6 +14,9 @@ export function Nav() {
             <h2 className="homeIcon">
               <Link exact to="/" className="link1">ToDO LIST</Link>
             </h2>
+        </div>
+        <div className="sign">
+          <img src={sign} alt="Not Found" id="personalSign"/>
         </div>
         <div className="buttonContainer">
           <div className="divButtonRight">

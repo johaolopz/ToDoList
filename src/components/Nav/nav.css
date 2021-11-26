@@ -91,3 +91,14 @@ header {
 #todoListIcon{
     height: 70%;
 }
+
+.sign {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#personalSign {
+    display: flex;
+    width: 93%;
+}
