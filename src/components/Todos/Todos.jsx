@@ -16,6 +16,7 @@ export function Todos({status}) {
                 <Todo
                   key={el.id}
                   title={el.title}
+                  status={el.status}
                 />
               </Link>)
             }})}

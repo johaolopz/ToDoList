@@ -30,6 +30,28 @@ export function TodoDetail() {
       .then(() => setRedirect(true));
     }
 
+    function dispatcherRemove(){
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you won't be able to get it back!",
+        icon: "warning",
+        buttons: {
+          yes: true,
+          cancel: "No",
+        },
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          dispatch(removeTodo(parseInt(params.id)))
+          swal("Your ToDO has been deleted!", {
+            icon: "success",
+          });
+          setRedirect(true)
+        }
+      });
+    }
+
   return (
     <Fragment>
         {(redirect) && <Navigate to="/" />}
@@ -44,7 +66,7 @@ export function TodoDetail() {
             <div className="buttons">
                 <Button variant="contained" color="success" id="doneButton" onClick={() => dispatcherDone()} >DONE</Button>
                 <Button variant="contained" color="secondary" id="inProgressButton" onClick={() => dispatcherInProgress()} >IN PROGRESS</Button>
-                <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatch(removeTodo(parseInt(params.id)))} >DELETE</Button>
+                <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatcherRemove()} >DELETE</Button>
             </div>
             <div className="divBack">
               <Link exact to="/" className="link">← Back</Link>
