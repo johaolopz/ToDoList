@@ -20,7 +20,13 @@ export function TodoDetail() {
 
     function dispatcherDone(){
       dispatch(toDone(parseInt(params.id)));
-      swal("Done!!!", "Your ToDO changed state!", "success")
+      swal("Done!!!", "Congrats. Good Job!", "success")
+      .then(() => setRedirect(true));
+    }
+
+    function dispatcherInProgress(){
+      dispatch(toInProgress(parseInt(params.id)))
+      swal("Ready!!!", "Your ToDO is in progress!", "success")
       .then(() => setRedirect(true));
     }
 
@@ -37,7 +43,7 @@ export function TodoDetail() {
             </div>
             <div className="buttons">
                 <Button variant="contained" color="success" id="doneButton" onClick={() => dispatcherDone()} >DONE</Button>
-                <Button variant="contained" color="secondary" id="inProgressButton" onClick={() => dispatch(toInProgress(parseInt(params.id)))} >IN PROGRESS</Button>
+                <Button variant="contained" color="secondary" id="inProgressButton" onClick={() => dispatcherInProgress()} >IN PROGRESS</Button>
                 <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatch(removeTodo(parseInt(params.id)))} >DELETE</Button>
             </div>
             <div className="divBack">
