@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 import AddTodo from './components/AddTodo/AddTodo';
 import Nav from './components/Nav/Nav';
 import TodoDetail from './components/TodoDetail/TodoDetail';
-
+import Social from './components/Social/Social';
 
 function App() {
   return (
@@ -19,6 +19,10 @@ function App() {
         element={<AddTodo />} />
         <Route path="/edit/:id"
         element={<TodoDetail />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/"
+        element={<Social />} />
       </Routes>
     </div>
   );

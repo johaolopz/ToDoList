@@ -1,0 +1,58 @@
+.footerSocial{
+    margin-top: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.linkedin{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.github{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.mail{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.socialLinks {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+#linkedinIcon{
+    width: 24%;
+}
+
+#githubIcon{
+    width: 30%;
+}
+
+#mailIcon{
+    width: 15.5%;
+    margin-right: 5px;
+}
+
+text {
+    color: white;
+    font-size: 20px;
+    margin-left: 3px;
+}
