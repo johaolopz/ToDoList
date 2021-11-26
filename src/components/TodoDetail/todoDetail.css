@@ -7,3 +7,29 @@
 h2 {
     display: flex;
 }
+
+#doneButton {
+    margin-right: 5px;
+}
+
+#deleteButton {
+    margin-left: 5px;
+    background-color:darkred;
+    color: white;
+    border: solid 0.5px;
+    transition: 0.1s;
+}
+
+#deleteButton:hover{
+    transform: scale(1.03);
+}
+
+span {
+    height: auto;
+    padding-top: 0px;
+    margin: auto;
+}
+
+.buttons {
+    margin-top: 10px;
+}
