@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/ToDoList/static/css/main.d99b408f.chunk.css",
+    "main.js": "/ToDoList/static/js/main.3da9d53c.chunk.js",
+    "main.js.map": "/ToDoList/static/js/main.3da9d53c.chunk.js.map",
+    "runtime-main.js": "/ToDoList/static/js/runtime-main.0fa4f938.js",
+    "runtime-main.js.map": "/ToDoList/static/js/runtime-main.0fa4f938.js.map",
+    "static/js/2.2f7ba5d6.chunk.js": "/ToDoList/static/js/2.2f7ba5d6.chunk.js",
+    "static/js/2.2f7ba5d6.chunk.js.map": "/ToDoList/static/js/2.2f7ba5d6.chunk.js.map",
+    "static/js/3.efafc4ca.chunk.js": "/ToDoList/static/js/3.efafc4ca.chunk.js",
+    "static/js/3.efafc4ca.chunk.js.map": "/ToDoList/static/js/3.efafc4ca.chunk.js.map",
+    "index.html": "/ToDoList/index.html",
+    "static/css/main.d99b408f.chunk.css.map": "/ToDoList/static/css/main.d99b408f.chunk.css.map",
+    "static/js/2.2f7ba5d6.chunk.js.LICENSE.txt": "/ToDoList/static/js/2.2f7ba5d6.chunk.js.LICENSE.txt",
+    "static/media/GitHub.b7584d64.svg": "/ToDoList/static/media/GitHub.b7584d64.svg",
+    "static/media/Gmail.f09e1100.svg": "/ToDoList/static/media/Gmail.f09e1100.svg",
+    "static/media/LinkedIn.c9877143.svg": "/ToDoList/static/media/LinkedIn.c9877143.svg",
+    "static/media/buttonPlus.fa08d671.svg": "/ToDoList/static/media/buttonPlus.fa08d671.svg",
+    "static/media/sign.4b43747c.svg": "/ToDoList/static/media/sign.4b43747c.svg",
+    "static/media/todoListIcon.d5f36e43.svg": "/ToDoList/static/media/todoListIcon.d5f36e43.svg",
+    "static/media/words.cde5db6e.svg": "/ToDoList/static/media/words.cde5db6e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0fa4f938.js",
+    "static/js/2.2f7ba5d6.chunk.js",
+    "static/css/main.d99b408f.chunk.css",
+    "static/js/main.3da9d53c.chunk.js"
+  ]
+}
