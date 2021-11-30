@@ -49,3 +49,13 @@
 #addButton:hover{
     background-color:black;
 }
+
+@media (max-width: 768px) {
+    .divForm {
+        width: 80%;
+    }
+
+    .form-container {
+        width: 85%;
+    }
+}
