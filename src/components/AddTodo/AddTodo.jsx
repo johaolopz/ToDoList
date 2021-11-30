@@ -52,7 +52,7 @@ function AddTodo() {
       }      
     return (
       <Fragment>
-        {(redirect) && <Navigate to="/" />}
+        {(redirect) && <Navigate to="/ToDoList/" />}
         <div className="divFormGlobal">
           <div className="divForm">
             <form className="form-container" onSubmit={(e) => handleSubmit(e)}>

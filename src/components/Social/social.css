@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 40px;
 }
 
 .footerContainer {
@@ -55,4 +56,18 @@ text {
     color: white;
     font-size: 20px;
     margin-left: 3px;
+}
+
+@media (max-width: 850px) {
+    .footerContainer{
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerContainer{
+        flex-direction: column;
+        align-items: center;
+    }
 }

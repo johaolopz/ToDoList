@@ -12,7 +12,7 @@ export function Todos({status}) {
            {stateTodo.map(el => {
              if (el.status === status) {
                return (
-              <Link to={`/edit/${el.id}`} className="titleTodo">
+              <Link to={`/ToDoList/edit/${el.id}`} className="titleTodo">
                 <Todo
                   key={el.id}
                   title={el.title}

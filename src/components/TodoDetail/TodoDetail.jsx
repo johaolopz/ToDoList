@@ -54,7 +54,7 @@ export function TodoDetail() {
 
   return (
     <Fragment>
-        {(redirect) && <Navigate to="/" />}
+        {(redirect) && <Navigate to="/ToDoList/" />}
         <div className="detailComponentContainer">
           <div className="container">
             <span className="spanTitle"><h2 className="h2Title">{detailTodo[0].title}</h2></span>
@@ -69,7 +69,7 @@ export function TodoDetail() {
                 <Button variant="outlined" color="error" startIcon={<DeleteIcon />} id="deleteButton" onClick={() => dispatcherRemove()} >DELETE</Button>
             </div>
             <div className="divBack">
-              <Link exact to="/" className="link">← Back</Link>
+              <Link exact to="/ToDoList/" className="link">← Back</Link>
             </div>
           </div>
           <hr />

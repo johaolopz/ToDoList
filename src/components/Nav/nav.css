@@ -1,7 +1,10 @@
+@import url('http://fonts.cdnfonts.com/css/bruno-ace');
+
 .divNav{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
+    font-family: 'Bruno Ace', sans-serif;
 }
 
 header {
@@ -101,4 +104,20 @@ header {
 #personalSign {
     display: flex;
     width: 93%;
+}
+
+@media (max-width: 768px) {
+    .sign{
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .iconList{
+        display: none;
+    }
+
+    .divNav{
+        margin-bottom: 50px;
+    }
 }

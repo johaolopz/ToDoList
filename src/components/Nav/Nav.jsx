@@ -12,7 +12,7 @@ export function Nav() {
       <header>
         <div className="divH2">
             <h2 className="homeIcon">
-              <Link exact to="/" className="link1">ToDO LIST</Link>
+              <Link exact to="/ToDoList/" className="link1">ToDO LIST</Link>
             </h2>
         </div>
         <div className="sign">
@@ -21,7 +21,7 @@ export function Nav() {
         <div className="buttonContainer">
           <div className="divButtonRight">
             <img src={words} alt="Not Found" id="words" />
-            <Link exact to="/add" className="buttonPlusContainerRight" >
+            <Link exact to="/ToDoList/add" className="buttonPlusContainerRight" >
                 <img src={buttonPlus} alt="Not Found" id="buttonPlus" />
             </Link>
           </div>

@@ -13,15 +13,15 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route exact path="/"
+        <Route exact path="/ToDoList/"
         element={<Home />} />
-        <Route path="/add"
+        <Route path="/ToDoList/add"
         element={<AddTodo />} />
-        <Route path="/edit/:id"
+        <Route path="/ToDoList/edit/:id"
         element={<TodoDetail />} />
       </Routes>
       <Routes>
-        <Route exact path="/"
+        <Route exact path="/ToDoList/"
         element={<Social />} />
       </Routes>
     </div>
